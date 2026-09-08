@@ -1,5 +1,5 @@
 import type { Spec } from "@json-render/core";
-import type { CampusPlan } from "./plan-schema.js";
+import type { CampusPlan } from "./plan-schema";
 
 /**
  * Part 2 starts with a valid but plain two-element UI. Students extend this function so the

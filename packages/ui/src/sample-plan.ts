@@ -1,4 +1,4 @@
-import type { CampusPlan } from "./plan-schema.js";
+import type { CampusPlan } from "./plan-schema";
 
 export const samplePlan: CampusPlan = {
   responseId: "sample-balanced-saturday",

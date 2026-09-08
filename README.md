@@ -742,7 +742,7 @@ Replace the temporary preview in `page.tsx` with `CampusChat`.
 the known action and submit its prompt as the next human message:
 
 ```tsx
-if (name === "choosePlan" && typeof params.prompt === "string") {
+if (name === "choosePlan" && typeof params?.prompt === "string") {
   thread.submit({
     messages: [{ type: "human", content: params.prompt }],
   });

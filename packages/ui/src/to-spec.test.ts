@@ -6,7 +6,7 @@ import { samplePlan } from "./sample-plan.js";
 describe("planToSpec exercise", () => {
   it("creates one timeline element for every scheduled item", () => {
     const spec = planToSpec(samplePlan);
-    const timelineItems = Object.keys(spec.elements).filter((key) => key.startsWith("timeline-"));
+    const timelineItems = Object.keys(spec.elements).filter((key) => /^timeline-\d+$/.test(key));
     expect(timelineItems).toHaveLength(samplePlan.schedule.length);
   });
 
