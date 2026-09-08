@@ -1,0 +1,13 @@
+node_modules/
+.turbo/
+.next/
+.skein/
+coverage/
+*.log
+.DS_Store
+
+# Secrets
+.env
+.env.local
+.env.*.local
+!.env.example

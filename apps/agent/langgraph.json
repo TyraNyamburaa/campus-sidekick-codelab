@@ -1,0 +1,7 @@
+{
+  "node_version": "24",
+  "graphs": {
+    "echo": "./src/echo-graph.ts:graph"
+  },
+  "env": ".env"
+}

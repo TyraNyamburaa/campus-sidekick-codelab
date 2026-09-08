@@ -1,0 +1,29 @@
+{
+  "name": "@campus-sidekick/agent",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "skein dev --port 2024",
+    "dev:services": "docker compose -f compose.dev.yaml up -d",
+    "build": "skein build --artifact-only",
+    "start": "skein start",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run src/echo-graph.test.ts",
+    "test:exercise": "vitest run src/campus-tools.test.ts"
+  },
+  "dependencies": {
+    "@langchain/core": "^1.2.9",
+    "@langchain/google": "^0.2.4",
+    "@langchain/langgraph": "^1.4.0",
+    "langchain": "^1.5.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@langchain/langgraph-sdk": "^1.9.0",
+    "@types/node": "^22.10.0",
+    "skein-js": "^0.16.0",
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.9"
+  }
+}
