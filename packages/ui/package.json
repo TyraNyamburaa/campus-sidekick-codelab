@@ -1,0 +1,23 @@
+{
+  "name": "@campus-sidekick/ui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run src/catalog.test.ts",
+    "test:exercise": "vitest run src/to-spec.test.ts"
+  },
+  "dependencies": {
+    "@json-render/core": "^0.20.0",
+    "@json-render/react": "^0.20.0",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2",
+    "vitest": "^4.1.9"
+  }
+}
