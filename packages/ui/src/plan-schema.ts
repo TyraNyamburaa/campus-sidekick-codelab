@@ -4,7 +4,7 @@ export const planItemSchema = z.object({
   time: z.string().describe("Short display time, for example 2:00 PM"),
   title: z.string().describe("Name of the trusted venue or activity"),
   description: z.string().describe("One concise sentence describing this stop"),
-  costKsh: z.number().nonnegative().describe("Cost of this item in Kenyan shillings"),
+  costKsh: z.number().min(0).describe("Cost of this item in Kenyan shillings"),
 });
 
 export const campusPlanSchema = z.object({
@@ -12,9 +12,9 @@ export const campusPlanSchema = z.object({
   title: z.string().describe("A lively title for the plan"),
   summary: z.string().describe("A short conversational explanation of why this plan fits"),
   tone: z.enum(["focus", "balanced", "social"]),
-  budgetKsh: z.number().positive(),
-  totalCostKsh: z.number().nonnegative(),
-  remainingKsh: z.number().nonnegative(),
+  budgetKsh: z.number().min(1),
+totalCostKsh: z.number().min(0),
+remainingKsh: z.number().min(0),
   schedule: z.array(planItemSchema).min(1).max(6),
   followUps: z
     .array(

@@ -1,7 +1,8 @@
 {
   "node_version": "24",
   "graphs": {
-    "echo": "./src/echo-graph.ts:graph"
+    "echo": "./src/echo-graph.ts:graph",
+    "campus-sidekick": "./src/campus-sidekick-graph.ts:graph"
   },
   "env": ".env"
 }
